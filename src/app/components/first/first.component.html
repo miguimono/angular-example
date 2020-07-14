@@ -10,3 +10,21 @@
 <ul>
   <li *ngFor="let user of users">{{ user }}</li>
 </ul>
+<hr />
+<ul>
+  <div *ngIf="activated">
+    <li *ngFor="let user of users">{{ user }}</li>
+  </div>
+</ul>
+<hr />
+<ul>
+  <div *ngIf="activated">
+    <li *ngFor="let user of users">
+      <second [nameSecond]="user"></second>
+    </li>
+  </div>
+</ul>
+<hr />
+<ul>
+  <second *ngFor="let user of users" [nameSecond]="user"></second>
+</ul>

@@ -10,9 +10,11 @@ import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { ThirdComponent } from './components/third/third.component';
 import { FourComponent } from './components/four/four.component';
+import { FifthComponent } from './components/fifth/fifth.component';
 
 import { DataService } from './data.service';
-import { LinksComponent } from './components/links/links.component';
+import { SixthComponent } from './components/sixth/sixth.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { LinksComponent } from './components/links/links.component';
     SecondComponent,
     ThirdComponent,
     FourComponent,
-    LinksComponent
+    FifthComponent,
+    SixthComponent,
   ],
   imports: [
     BrowserModule,
