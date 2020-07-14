@@ -1,0 +1,26 @@
+<div>
+    <h1>{{title}}</h1>
+    <form (submit)="addUser(newUser)" >
+        <input type="text" #newUser>
+        <button>Crear usuario</button>
+    </form>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user}}  <button (click)="sayUser(user)">Boton de {{user}}</button>
+            <button (click)="deleteUser(user)">Borrar {{user}}</button>
+            
+            
+        </li>
+    </ul>
+    <button (click)="sayHello()">Boton del cuatro</button>
+
+    <hr>
+    <form>
+        <input type="text" name = "name" [(ngModel)] = "name">
+        <input type="text" name = "age" [(ngModel)] = "age">
+    </form>
+    <h2>name: {{name}}</h2>
+    <h3>age: {{age}}</h3>
+</div>
+
+<p>four works!</p>
