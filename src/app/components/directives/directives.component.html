@@ -1,0 +1,68 @@
+<h1 class="container bg-dark text-white text-center my-4 py-4">
+  show = {{ show }}
+</h1>
+<div class="container">
+  <h2>
+    if-else
+  </h2>
+  <button class="btn btn-warning" (click)="show = !show">Accion</button>
+  <p class="text-info" *ngIf="show; else showTwo">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum at, quisquam
+    dolores exercitationem odio doloremque, ad vitae necessitatibus voluptatem,
+    numquam tempora esse id cupiditate delectus dolorem ea labore corrupti
+    ipsam?
+  </p>
+  <ng-template #showTwo>
+    <p class="text-danger">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, quis
+      tenetur quas quae molestias exercitationem culpa vitae, dolores
+      repellendus debitis sapiente eveniet tempore reiciendis, cupiditate qui.
+      Molestias perferendis quidem eaque?
+    </p>
+  </ng-template>
+  <hr />
+  <h2>
+    ngClass
+  </h2>
+  <button class="btn btn-dark mb-3" (click)="activo = 'primero'">
+    Primero
+  </button>
+  <button class="btn btn-danger mb-3" (click)="activo = 'segundo'">
+    Segundo
+  </button>
+
+  <p class="text-info d-none" [ngClass]="{ 'd-block': activo == 'primero' }">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eius enim
+    possimus, error ea aspernatur aliquid quae quisquam tenetur soluta assumenda
+    explicabo et cumque molestiae dolorem totam saepe porro perspiciatis.
+  </p>
+  <p class="text-danger d-none" [ngClass]="{ 'd-block': activo == 'segundo' }">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur sint
+    quo, rerum aperiam perferendis voluptatem beatae, inventore dicta fugit vero
+    hic impedit voluptatum asperiores labore, natus id vel. Eos, necessitatibus!
+  </p>
+  <hr>
+  <h2>
+      For
+  </h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">TIPO</th>
+                <th scope="col">NOMBRE</th>
+                <th scope="col">EDAD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let animal of animals; index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{animal.type}}</td>
+                <td>{{animal.name}}</td>
+                <td>{{animal.age}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+     
+</div>

@@ -1,0 +1,24 @@
+<h1>Servicios</h1>
+
+<p>from https://jsonplaceholder.typicode.com/posts</p>
+
+<div *ngFor="let post of posts, index as i">
+  <h3>Titulo </h3>
+  <p> {{ post.title }} </p>
+  <a [routerLink]="['/dynamic',i]">Ver mas ...</a>
+  <hr>
+  <dynamic></dynamic>
+</div>
+<hr />
+<!--
+ 
+<div *ngFor="let post of posts">
+  <h3>Titulo </h3>
+  <p> {{ post.title }} </p>
+  <h4>ID:UserID {{ post.id }}:{{ post.userId }}</h4>
+  <p>{{ post.body }}</p>
+</div>
+<hr />
+
+ 
+-->

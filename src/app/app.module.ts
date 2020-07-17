@@ -11,9 +11,15 @@ import { SecondComponent } from './components/second/second.component';
 import { ThirdComponent } from './components/third/third.component';
 import { FourComponent } from './components/four/four.component';
 import { FifthComponent } from './components/fifth/fifth.component';
-
-import { DataService } from './data.service';
 import { SixthComponent } from './components/sixth/sixth.component';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { HomeComponent } from './components/home/home.component';
+
+//services
+import { DataService } from './data.service';
+import { ServiceComponent } from './components/service/service.component';
+import { DynamicComponent } from './components/dynamic/dynamic.component';
+
 
 
 @NgModule({
@@ -25,6 +31,10 @@ import { SixthComponent } from './components/sixth/sixth.component';
     FourComponent,
     FifthComponent,
     SixthComponent,
+    DirectivesComponent,
+    HomeComponent,
+    ServiceComponent,
+    DynamicComponent,
   ],
   imports: [
     BrowserModule,
